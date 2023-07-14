@@ -1,0 +1,31 @@
+###
+POST http://localhost:8080/other/multipart
+Content-Type: multipart/form-data; boundary=XXX
+
+--XXX
+Content-Disposition: form-data; name="id"
+Content-Type: application/json
+
+100
+
+--XXX
+Content-Disposition: form-data; name="name"
+Content-Type: text/plain
+
+foobar
+
+<> 2023-07-14T165922.200.txt
+<> 2023-07-14T165909.415.json
+
+
+
+###
+POST http://localhost:8080/other/formUrlEncoded
+Content-Type: application/x-www-form-urlencoded
+
+id=100&name='foo'
+
+<> 2023-07-14T172114.200.txt
+<> 2023-07-14T171744.415.json
+
+###
